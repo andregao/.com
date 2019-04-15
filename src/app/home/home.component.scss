@@ -1,0 +1,17 @@
+@import "variables";
+
+.container {
+  & > * {
+    padding: 2rem 0;
+
+    &:nth-child(2n) {
+      background-color: white;
+
+    }
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+
+
+}

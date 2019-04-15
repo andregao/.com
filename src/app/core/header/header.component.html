@@ -1,0 +1,25 @@
+<mat-toolbar
+  color="primary"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+>
+  <button fxHide.gt-xs mat-icon-button>
+    <mat-icon (click)="layoutService.sidenav.toggle(true)">menu</mat-icon>
+  </button>
+  <div class="site-title" (click)="layoutService.scrollTo('hero')" fxLayout="row" fxLayoutAlign="start center">
+    <img class="logo" src="./assets/angular-gao.png" alt="website logo">
+    <div>ANDRE GAO</div>
+  </div>
+  <div fxFlex></div>
+  <div class="nav-items" fxHide fxShow.gt-xs>
+    <button
+      mat-button
+      *ngFor="let item of layoutService.navItems"
+      (click)="layoutService.scrollTo(item)"
+      [ngClass.gt-xs]="{'active': (layoutService.currentSection$ | async) === item}"
+    >
+      {{ item | uppercase }}
+    </button>
+  </div>
+</mat-toolbar>
+

@@ -1,0 +1,49 @@
+<div class="section-container" fxLayout="column" fxLayoutAlign="start center">
+  <h1 class="section-heading">- Experience -</h1>
+
+  <ng-container *ngFor="let company of sectionContent">
+    <mat-card
+      class="card"
+      fxLayout="column"
+      fxLayoutAlign="start center"
+      fxLayout.gt-xs="row nowrap"
+      fxLayoutAlign.gt-xs="center start"
+    >
+      <img
+        fxFlex.gt-xs="1 1 35"
+        fxFlexAlign.gt-sm="center"
+        class="logo"
+        [src]="'./assets/experience/' + company.logo"
+        alt="{{ company.name }} Logo"
+        (click)="layoutService.openSlideshow(company.dialog)"
+      />
+      <div class="card-content__column" fxLayout="column" fxFlex.gt-xs="1 0 65">
+        <mat-card-title>{{ company.name }}</mat-card-title>
+        <mat-card-subtitle
+          fxLayout="column"
+          fxLayoutGap="3px"
+          fxLayoutAlign="start stretch"
+        >
+          <div fxLayout="row" fxLayoutAlign="space-between end">
+            <div class="position">{{ company.position }}</div>
+            <div class="year">{{ company.year }}</div>
+          </div>
+          <div class="location" fxFlexAlign="end">{{ company.location }}</div>
+        </mat-card-subtitle>
+        <mat-card-content>
+          <p class="mat-body">
+            {{ company.description }}
+          </p>
+        </mat-card-content>
+        <button
+          fxFlexAlign="end"
+          class="card-button"
+          mat-stroked-button
+          color="primary"
+          (click)="layoutService.openSlideshow(company.dialog)"
+        >MORE
+        </button>
+      </div>
+    </mat-card>
+  </ng-container>
+</div>

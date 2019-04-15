@@ -1,0 +1,30 @@
+<div class="section-container" fxLayout="column" fxLayoutAlign="start center">
+  <h1 class="section-heading">- About Me -</h1>
+  <div class="mat-body">
+    {{sectionContent.intro}}
+  </div>
+  <div
+    class="gallery"
+    fxLayout="column"
+    fxLayoutAlign="center stretch"
+    fxLayout.gt-xs="row"
+  >
+    <ng-container *ngFor="let section of sectionContent.subSections">
+      <div
+        class="image-container"
+        fxFlex.gt-xs="1 1 0"
+        fxLayout="column"
+        (click)="layoutService.openSlideshow(section.dialog)"
+      >
+        <img
+          [src]="section.thumbnails.col"
+          [src.gt-xs]="section.thumbnails.row"
+          alt="{{ section.title }} Thumbnail"
+        />
+        <h2 class="title mat-h2" ngClass.gt-xs="title__row mat-h2">
+          {{ section.title }}
+        </h2>
+      </div>
+    </ng-container>
+  </div>
+</div>

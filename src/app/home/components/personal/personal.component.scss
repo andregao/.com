@@ -1,0 +1,52 @@
+  .mat-body {
+    text-align: center;
+    width: 70vw;
+    max-width: 55rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery {
+    background-color: #071d3c;
+    width: 100%;
+
+    .image-container {
+      cursor: pointer;
+      position: relative;
+
+      .title {
+        text-shadow: -3px -3px 6px rgba(black, 0.4),
+        3px -3px 6px rgba(black, 0.4),
+        -3px 3px 6px rgba(black, 0.4),
+        3px 3px 6px rgba(black, 0.4);
+      }
+
+      &:hover {
+        & > img {
+          filter: none;
+        }
+      }
+
+      img {
+        filter: brightness(.7);
+        width: 100%;
+        object-fit: cover;
+        transition: filter 200ms;
+      }
+
+      .title {
+        color: white;
+        font-size: 2rem;
+
+        &__row {
+          font-size: 3vw;
+        }
+
+        font-weight: 400;
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }

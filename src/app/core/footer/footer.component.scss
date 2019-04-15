@@ -1,0 +1,17 @@
+@import "variables";
+
+.container {
+  width: 100vw;
+  color: white;
+  background-color: $primary-light;
+  padding: 2rem 20% 3rem 20%;
+
+  .links {
+    color: white;
+    a{
+      mat-icon{
+        margin-right: .2rem;
+      }
+    }
+  }
+}

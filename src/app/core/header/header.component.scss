@@ -1,0 +1,21 @@
+.site-title {
+  cursor: pointer;
+  margin-left: .5rem;
+  height: 100%;
+  padding: .8rem 0;
+  .logo{
+    height: 100%;
+    object-fit: contain;
+    margin-right: .3rem;
+  }
+}
+.nav-items {
+  button {
+    color: rgba(white, 0.67);
+    transition: color 150ms;
+
+    &.active {
+      color: white;
+    }
+  }
+}

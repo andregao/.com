@@ -1,0 +1,57 @@
+@import "variables";
+
+ag-header {
+  width: 100vw;
+  position: fixed;
+  transform: translateY(-100%);
+  z-index: 10;
+  transition: transform 300ms ease-in-out;
+
+  &.show {
+    transform: translateY(0);
+  }
+}
+
+.sidenav-container {
+  height: 100%;
+
+  .logo-container {
+    position: relative;
+
+    .logo {
+      height: 56px;
+      object-fit: cover;
+    }
+
+    .text-container {
+      position: absolute;
+      font-size: 1.1rem;
+      font-weight: 500;
+      right: 12%;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(black, 0.75);
+      text-shadow: 2px 0 2px white,
+      -2px 0 2px white,
+      0 2px 2px white,
+      0 2px 2px white;
+    }
+  }
+
+  mat-nav-list {
+
+    mat-icon {
+      margin-right: .5rem;
+    }
+
+    .nav-item {
+      border-radius: 5%;
+      transition: background-color 200ms;
+
+      &.active {
+        color: $primary-dark;
+        background-color: rgba($primary-light, 0.3);
+      }
+    }
+  }
+}

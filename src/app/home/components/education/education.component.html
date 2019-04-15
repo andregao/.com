@@ -1,0 +1,103 @@
+<div class="section-container" fxLayout="column" fxLayoutAlign="start center">
+  <h1 class="section-heading">- Education -</h1>
+
+  <mat-card class="card" fxLayout="column" fxLayoutAlign="start center">
+    <div
+      class="logo-group"
+      fxLayout="column"
+      fxLayoutAlign="start center"
+      fxLayout.gt-xs="row nowrap"
+      fxLayoutAlign.gt-xs="center start"
+    >
+      <img
+        fxFlex.gt-xs="50"
+        class="logo"
+        src="./assets/education/pluralsight-logo.jpg"
+        alt="Pluralsight Logo"
+      />
+      <img
+        fxFlex.gt-xs="50"
+        class="logo"
+        src="./assets/education/pluralsight-role.jpg"
+        alt="role iq score"
+      />
+    </div>
+    <div class="card-content" fxLayout="column">
+      <mat-card-title>
+        {{ sectionContent?.pluralsight.title }}
+      </mat-card-title>
+      <mat-card-subtitle fxLayout="row" fxLayoutAlign="space-between">
+        <div *ngFor="let item of sectionContent?.pluralsight.subtitle">{{ item }}</div>
+      </mat-card-subtitle>
+      <mat-card-content>
+        <p class="mat-body">
+          {{ sectionContent?.pluralsight.description }}
+        </p>
+      </mat-card-content>
+      <div class="card-buttons" fxFlexAlign="end">
+        <a
+          class="card-button"
+          mat-raised-button
+          color="primary"
+          href="//pluralsight.com/profile/andregao"
+          target="_blank"
+        >
+          SKILL PROFILE
+        </a>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="card" fxLayout="column" fxLayoutAlign="start center">
+    <div
+      class="logo-group"
+      fxLayout="column"
+      fxLayoutAlign="start center"
+      fxLayout.gt-xs="row nowrap"
+      fxLayoutAlign.gt-xs="center start"
+    >
+      <img
+        fxFlex.gt-xs="50"
+        class="logo"
+        src="./assets/education/utas.png"
+        alt="UTAS Logo"
+      />
+      <img
+        fxFlex.gt-xs="50"
+        class="logo"
+        src="./assets/education/shou.jpg"
+        alt="SHOU Logo"
+      />
+    </div>
+    <div class="card-content__column" fxLayout="column">
+      <mat-card-title>
+        {{ sectionContent?.college.name }}
+      </mat-card-title>
+      <mat-card-subtitle fxLayout="row" fxLayoutAlign="space-between">
+        <div fxLayout="column">
+          <div *ngFor="let degree of sectionContent?.college.degrees">{{ degree }}</div>
+        </div>
+        <div fxLayout="column" class="date-location">
+          <div *ngFor="let item of sectionContent?.college.dateAndLocation">
+            {{ item }}
+          </div>
+        </div>
+      </mat-card-subtitle>
+      <mat-card-content fxLayout="column">
+        <p class="mat-body">
+          {{ sectionContent?.college.description }}
+        </p>
+      </mat-card-content>
+      <div class="card-buttons" fxFlexAlign="end">
+        <a
+          class="card-button"
+          mat-stroked-button
+          color="primary"
+          (click)="openDiplomaDialog()"
+        >
+          DIPLOMA
+        </a>
+      </div>
+    </div>
+  </mat-card>
+</div>

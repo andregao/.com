@@ -1,0 +1,117 @@
+<div class="container" fxLayout="column">
+    <div class="scroller" fxFlex="1 0 90" fxLayout="row" #scroller cdkScrollable>
+      <!--each piece of content-->
+      <div
+        class="items"
+        *ngFor="let item of data.items"
+        fxLayout="column"
+      >
+        <!--when it's a image-->
+        <ng-container *ngIf="item.type === 'image'">
+          <img
+            class="image"
+            fxFlex="1 1 93"
+            [src]="item.url"
+            (click)="openOverlay(item)"
+            [alt]="item.caption"/>
+        </ng-container>
+        <!--when it's a video-->
+        <ng-container *ngIf="item.type === 'video'">
+          <div
+            class="video-container"
+            fxFlex="1 0 91"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+          >
+            <ng-container
+              *ngIf="isIosSafari(); then youtubeLink; else youtubeIframe"
+            ></ng-container>
+          </div>
+        </ng-container>
+        <!--caption-->
+        <div class="title mat-body" fxFlex="1 1 9">{{ item.caption }}</div>
+        <!--youtube link template-->
+        <ng-template #youtubeLink>
+          <a href="https://youtu.be/{{ item.url }}">
+            <img
+              width="{{ contentWidth }}"
+              height="{{ (contentWidth / 16) * 9 }}"
+              src="https://img.youtube.com/vi/{{ item.url }}/0.jpg"
+              [alt]="item.caption"/>
+            <img src="./assets/youtube-play-button.png" class="play-button" alt="play button"/>
+          </a>
+        </ng-template>
+        <!--youtube embed template-->
+        <ng-template #youtubeIframe>
+          <div [innerHTML]="getYoutubeIframe(item.url) | safeHtml"></div>
+        </ng-template>
+      </div>
+    </div>
+    <!--buttons-->
+    <button mat-icon-button class="close-button" (click)="dialogRef.close()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <div class="nav-buttons" *ngIf="data.items.length > 1">
+      <button
+        mat-icon-button
+        class="prev"
+        (click)="
+        currentIndex =
+          currentIndex !== 0 ? currentIndex - 1 : data.items.length - 1
+      "
+      >
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        class="next"
+        (click)="
+        currentIndex =
+          currentIndex !== data.items.length - 1 ? currentIndex + 1 : 0
+      "
+      >
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+
+  <!--  thumbnails-->
+  <div
+    *ngIf="data.items.length > 1"
+    fxFlex="0 1 10"
+    class="thumbnails-container"
+    fxLayout="row"
+  >
+    <div
+      class="card-image-container"
+      fxFlex="1 1 0"
+      *ngFor="let item of data.items; let i = index"
+      [class.not-selected]="i !== currentIndex"
+    >
+      <img
+        class="card-image"
+        alt="{{item.caption}} thumbnail"
+        [src]="
+          item.type === 'image' ? item.url
+            : 'https://img.youtube.com/vi/'+item.url+'/0.jpg'
+        "
+        (click)="currentIndex = i"
+      />
+      <div class="indicator"
+           [class.selected]="i === currentIndex"
+      ></div>
+    </div>
+  </div>
+</div>
+
+
+<!--full viewport overlay-->
+<ng-template #imageOverlay let-url let-caption="caption">
+  <div class="overlay-container">
+    <img
+      class="overlay-image"
+      [src]="url"
+      [alt]="caption"
+      (click)="closeImageOverlay()"
+    />
+  </div>
+</ng-template>

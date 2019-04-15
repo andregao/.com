@@ -1,0 +1,77 @@
+<div class="section-container" fxLayout="column" fxLayoutAlign="start center">
+  <h1 class="section-heading">- Projects -</h1>
+
+  <ng-container *ngFor="let project of sectionContent">
+    <ng-container
+      *ngTemplateOutlet="projectCard; context: { $implicit: project }"
+    >
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-template #projectCard let-project>
+  <mat-card
+    class="card"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+    fxLayout.gt-xs="row nowrap"
+    fxLayoutAlign.gt-xs="start stretch"
+  >
+    <div
+      fxFlex.gt-xs="1 1 38"
+      fxFlexAlign.gt-xs="start"
+      ngClass.gt-xs="card-image-container__row"
+      class="card-image-container"
+    >
+      <img
+        class="card-image"
+        [src]="'./assets/projects/' + project.thumbnail"
+        alt="screenshot of mathangs.com"
+      />
+    </div>
+    <div
+      fxFlex.gt-xs="1 0 62"
+      fxLayout="column"
+      fxLayoutAlign="space-between stretch"
+    >
+      <div>
+        <mat-card-title>{{ project.title }}</mat-card-title>
+        <mat-card-subtitle>{{ project.subtitle }}</mat-card-subtitle>
+        <mat-card-content>
+          <p class="mat-body">
+            {{ project.description }}
+          </p>
+        </mat-card-content>
+      </div>
+      <div class="card-buttons" fxLayout="row wrap" fxLayoutAlign="end stretch">
+        <ng-container *ngFor="let button of project.buttons">
+          <button
+            *ngIf="button.type === 'demo'"
+            class="card-button"
+            mat-button
+            (click)="layoutService.openSlideshow(button.dialogData)"
+          >
+            DEMO
+          </button>
+          <a
+            *ngIf="button.type === 'github'"
+            class="card-button"
+            mat-stroked-button
+            [href]="button.url"
+            target="_blank"
+            >GITHUB
+          </a>
+          <a
+            *ngIf="button.type === 'app'"
+            class="card-button"
+            mat-raised-button
+            color="primary"
+            [href]="button.url"
+            target="_blank"
+            >SEE APP
+          </a>
+        </ng-container>
+      </div>
+    </div>
+  </mat-card>
+</ng-template>
