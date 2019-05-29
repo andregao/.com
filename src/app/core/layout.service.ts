@@ -1,11 +1,15 @@
 import { ElementRef, Injectable, OnDestroy } from '@angular/core';
-import { MatDialog, MatSidenav } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSidenav } from '@angular/material/sidenav';
 import { SlideshowComponent } from '../shared/slideshow/slideshow.component';
 import { DialogData } from '../shared/models/dialog-data';
 import { auditTime, debounceTime, filter, map, startWith, takeUntil } from 'rxjs/operators';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { ViewportRuler } from '@angular/cdk/overlay';
 import { tap } from 'rxjs/internal/operators/tap';
+import { GaService } from './ga.service';
+
+declare const gtag: Function;
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +43,7 @@ export class LayoutService implements OnDestroy {
   constructor(
     private dialog: MatDialog,
     private viewport: ViewportRuler,
+    private ga: GaService,
   ) {
     // monitor viewport change
     this.viewport.change().pipe(
@@ -125,6 +130,7 @@ export class LayoutService implements OnDestroy {
   }
 
   openSlideshow(data: DialogData) {
+    gtag('event', this.ga.mapCaptionToTarget(data.items[0].caption));
     this.dialog.open(SlideshowComponent, {data});
   }
 

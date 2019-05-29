@@ -10,7 +10,7 @@ import {
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DialogData, DialogDataItem } from '../models/dialog-data';
 import { CdkScrollable, Overlay, OverlayRef, ScrollDispatcher, ViewportRuler } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
