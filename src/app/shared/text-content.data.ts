@@ -7,7 +7,9 @@ export const TEXTCONTENT = {
       title: 'andregao.com',
       subtitle: 'A personal website',
       description:
-        `After spending most of the time learning how to write business logic in Angular, it's refreshing to get to code responsive layouts, scrolling behaviors, and to work with portals and view containers inside the framework. After building this portfolio site, I became much more proficient with Flexbox, Web APIs, and generating views dynamically instead of direct DOM manipulations.`,
+        `A front end focused project built with Angular Material and Flex-Layout. it features a responsive design, reacts to scrolling behaviors, and utilizes modal interfaces. 
+
+After building this website, I became more proficient with CSS Flexbox, Web APIs, and managing views dynamically in Angular.`,
       thumbnail: 'andregao-thumbnail.jpg',
       buttons: [
         {
@@ -23,13 +25,13 @@ export const TEXTCONTENT = {
     },
     {
       title: 'mathangs.com',
-      subtitle: 'An ambitious todo list app',
+      subtitle: 'A practical todo list app',
       description:
-        `This is my first “back end of the front end” project after finishing the Angular courses on Pluralsight and I plan to develop it into a fully featured app.
+        `A “back end of the front end” project that uses centralized state management and a real-time NoSQL database.
 
-After signing up for an account, a user can organize items by projects, drag & drop to re-order lists and keep their data in sync between browsers. The app uses NgRx, a Redux state management pattern, to manage client-side data and state. For the backend, it takes advantage of Firestore’s real-time database with security rules, and Firebase Auth for OAuth or token based sign in.
+After signing up for an account, a user can add and organize todos by projects, drag & drop to reorder items and keep their data in sync between browsers. The app uses NgRx, a Redux state management pattern, to manage client-side data and state. For the backend, it takes advantage of Firestore’s real-time database with security rules, and Firebase Auth for OAuth and token-based authentications.
 
-It was a lot of fun for me to think and code in a functional programming pattern and use many of the RxJS operators.`,
+It was rewarding learning to work with back end services and get to code in a functional programming pattern using RxJS operators.`,
       thumbnail: 'mathangs-thumbnail.jpg',
       buttons: [
         {
@@ -46,11 +48,11 @@ It was a lot of fun for me to think and code in a functional programming pattern
     },
     {
       title: 'lowes10.com',
-      subtitle: 'A coupon code generator app that takes 10% off or more with Lowes orders(inactive)',
+      subtitle: 'A coupon code generator app that takes 10% off or more on Lowes orders(deactivated)',
       description:
-        `This simple app was built in early 2018 when the internet discovered the algorithm for Lowes single-use coupons. It helped users generate unique codes to use at Lowes and featured a quick calculation for the best type of coupon to apply. It checked with a database to make sure the code was unique and can either be copied to the clipboard or converted to a barcode to scan at a store. Unfortunately, Lowes started making frequent updates on the algorithm and were actively removing sharing posts, which leads to the abandonment of this app.
+        `This simple app was built in early 2018 when the internet discovered the algorithm for creating Lowes single-use coupons. The site helped users generate unique codes and featured a quick calculation tool for choosing the best type of savings. It checked with a database to make sure codes were unique, and users can use them online or create barcodes to scan at a store. Unfortunately, Lowes started making frequent updates to their algorithm and were actively removing sharing posts, which led to the abandonment of this application.
 
-Even though it's a short-lived project, It gave me happiness reading thank you messages and hearing how much people saved using the app.`,
+Though it's a short-lived project, It gave me joy knowing how much it helped people saved and reading thank you notes from some of the frequent users.`,
       thumbnail: 'lowes10-thumbnail.jpg',
       buttons: [
         {
@@ -66,15 +68,15 @@ Even though it's a short-lived project, It gave me happiness reading thank you m
   ] as Project[],
   education: {
     pluralsight: {
-      title: 'Pluralsight Angular Path',
-      subtitle: ['RoleIQ Level 2 Angular Developer', '2019'],
-      description: 'When first started, I had tried several learning resources to teach myself to code but found it difficult to apply to a production scale application. After taking some time off, I started fresh on Pluralsight and was impressed by the structure and quality of their courses. It helped me systematically study the framework, encouraged me to explore a wide range of topics, and gave me valuable insight into real-world practices.',
+      title: 'Pluralsight Angular Path / React Path',
+      subtitle: ['RoleIQ Level 2 Angular / React Developer', '2019'],
+      description: 'I started fresh on Pluralsight to learn Angular and React in 2019 after some time off last year and really enjoyed the structure and quality of their courses. It helped me systematically study both frameworks, encouraged me to explore a wide range of topics, and gave me valuable insight into real-world best practices.',
     },
     college: {
       name: 'University of Tasmania & Shanghai Ocean University',
       degrees: ['Bachelor of Information System', 'Bachelor of Management'],
       dateAndLocation: ['2004-2008', 'Shanghai China'],
-      description: 'A dual degree program that offered resources from both the Australian university and the local college. Focused on computer science as well as management with a variety of courses. Inspired me to pursue technology as a career and solidified my fundamental understanding of software design and engineering.'
+      description: 'It\'s a dual degree program that offered faculty members and course materials from both universities. It focused on computer science and management with a variety of subjects. It cultivated my love for learning and inspired me to pursue technology as a career'
     }
   },
   experience: [
@@ -84,7 +86,7 @@ Even though it's a short-lived project, It gave me happiness reading thank you m
       position: 'Intern Angular Developer',
       location: 'Las Vegas NV',
       year: '2018',
-      description: 'When starting off this new career in software engineering, I was very fortunate to get an internship at this political tech startup for a chance to study a production application and learn from an experienced team. It helped me understand how a scalable app was structured, and how the dev team collaborated on different parts of the application. It also opened my eyes to what software can do to impact people\'s lives and reignited my passion for building technologies that can make a difference.',
+      description: 'I was very fortunate to get an internship at this political tech startup. It offered me a chance to study the full stack of a production application and learn from an experienced team. It helped me understand how a scalable app was structured, and how the dev team collaborated on different parts of the project. It also opened my eyes to what software can do to impact people\'s lives and reignited my passion for building technologies that can make a difference.',
       dialog: {
         items: [
           {type: 'image', url: './assets/experience/indieparty-1.jpg', caption: 'Checking out the new tour bus at SXSW'},
@@ -99,11 +101,11 @@ Even though it's a short-lived project, It gave me happiness reading thank you m
       location: 'Hangzhou China, Las Vegas NV',
       year: '2011 - 2017',
       description:
-        `I was one of the founding members at a tech startup that helped small businesses buy products directly from China. We won the 2011 TechCrunch Disrupt Beijing and later evolved the business model to supplying brands with smart retail stores.
+        `I was one of the founding members at this tech startup that used technology to help small businesses purchase directly from China to improve their profit margin. We won the TechCrunch Disrupt Beijing in 2011 and later evolved the business model to developing and supplying smart retail solutions.
 
-In China, I led a sourcing team of 7 helping manufacturers showcasing their catalogs to US companies and brought our American clients’ product ideas to life. I managed supply chains for several private label programs that included sporting goods, construction, fashion and holiday decorations. We shipped dozens of containers to the US and delivered quality and low-cost products to small businesses.
+In China, I led a sourcing team of 7 helping Chinese manufacturers showcase their catalogs to US companies and brought our American clients’ product ideas from prototypes to mass productions. I managed supply chains for several private label programs that included sporting goods, construction, fashion and holiday decorations. We shipped dozens of containers to the US and delivered quality and low-cost products to small businesses.
 
-After the company pivoted we opened a new office in Las Vegas. I took on the role of IT Operations and scaled our network capacity to meet the increasing demand for new staff and devices. I also designed and implemented the IT infrastructure for our 20,000 sqft Zappos pop-up store in downtown Las Vegas where we had dozens of kiosks and welcomed hundreds of shoppers.`,
+After the company pivoted we opened a new office in Las Vegas where I took on the role of IT Operations. I designed and implemented the IT infrastructure for our 20,000 sqft Zappos pop-up store in downtown Las Vegas where we deployed a fleet of smart shopping kiosks and welcomed hundreds of customers.`,
       dialog: {
         items: [
           {type: 'image', url: './assets/experience/owm-1.jpg', caption: 'At the wholesale market talking to vendors'},
@@ -134,7 +136,7 @@ After the company pivoted we opened a new office in Las Vegas. I took on the rol
       position: 'Technical Manager',
       location: 'Shanghai China',
       year: '2008',
-      description: 'We were an e-commerce startup that sold Chinese handmade jewelry directly to American customers. I ran the regularly scheduled live events broadcasted from our partnered retail stores, where viewers around the world saw the products live and interact with the jewelry designer and our hostesses.',
+      description: 'We were an e-commerce startup that sold Chinese handmade jewelry directly to American customers. I ran the regularly scheduled live events broadcasted from our partnered retail stores, where viewers around the world could see the products live and interact with the jewelry designer and our hostesses.',
       dialog: {
         items: [
           {type: 'image', url: './assets/experience/shangby-1.jpg', caption: 'Live Event Setup'},
@@ -171,10 +173,10 @@ After the company pivoted we opened a new office in Las Vegas. I took on the rol
         dialog: {
           items: [
             {type: 'image', url: './assets/personal/friends/1.jpg', caption: 'Buddies Back Home'},
-            {type: 'image', url: './assets/personal/friends/2.jpg', caption: 'Old Gang'},
-            {type: 'image', url: './assets/personal/friends/3.jpg', caption: 'Favorite Couple'},
-            {type: 'image', url: './assets/personal/friends/4.jpg', caption: 'Enjoyed being the Photographer'},
-            {type: 'video', url: 'IzTeracYRNQ', caption: 'Honored to be the Tour Guide'},
+            {type: 'image', url: './assets/personal/friends/2.jpg', caption: 'The Gang'},
+            {type: 'image', url: './assets/personal/friends/3.jpg', caption: 'Our Favorite Couple'},
+            {type: 'image', url: './assets/personal/friends/4.jpg', caption: `I'm a photographer on demand`},
+            {type: 'video', url: 'IzTeracYRNQ', caption: 'Also a tour guide on demand'},
           ],
         }
       },
@@ -189,13 +191,13 @@ After the company pivoted we opened a new office in Las Vegas. I took on the rol
             {
               type: 'image',
               url: './assets/personal/communities/1.jpg',
-              caption: 'We fostered and help animals find new homes'
+              caption: 'We fostered and helped animals find new homes'
             },
-            {type: 'video', url: 'tK41WCuUfIs', caption: 'An adoption video I Made in 2010'},
+            {type: 'video', url: 'tK41WCuUfIs', caption: 'An old adoption video I made'},
             {
               type: 'image',
               url: './assets/personal/communities/3.jpg',
-              caption: `I'm the handyman for my senior neighbors`
+              caption: `From electrical and plumbing, to computers and cars. I do all I can to help our senior neighbors`
             },
           ],
         }

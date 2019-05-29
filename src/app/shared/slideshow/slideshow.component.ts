@@ -151,7 +151,7 @@ export class SlideshowComponent implements OnDestroy, AfterViewInit, OnInit {
   getYoutubeIframe(vid: string): string {
     return this.contentWidth ? `
       <iframe width="${this.contentWidth - 60}" height="${(this.contentWidth - 60) / 16 * 9}"
-          src="http://www.youtube.com/embed/${vid}" frameborder="0"
+          src="https://www.youtube.com/embed/${vid}" frameborder="0"
           allow="accelerometer; autoplay; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
      ` : '';

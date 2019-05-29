@@ -1,6 +1,3 @@
-// import * as firebase from 'firebase/app';
-// import 'firebase/firestore';
-// import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { pluck } from 'rxjs/operators';
@@ -21,11 +18,6 @@ export class DataService {
   personal$: Observable<Personal> = this.text$.pipe(pluck('personal'));
 
   constructor() {
-    // firebase.initializeApp(environment.firebase);
-    // this.db = firebase.firestore();
-    // this.db.doc('static/sectionContent').get()
-    //   .then(dataRef => this.sectionContent.next(dataRef.data()));
-
     this.text.next(TEXTCONTENT);
   }
 
