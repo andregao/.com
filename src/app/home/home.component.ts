@@ -14,11 +14,11 @@ import { DataService } from '../core/data.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  @ViewChild(HeroComponent, {read: ElementRef}) hero: ElementRef;
-  @ViewChild(ProjectsComponent, {read: ElementRef}) projects: ElementRef;
-  @ViewChild(EducationComponent, {read: ElementRef}) education: ElementRef;
-  @ViewChild(ExperienceComponent, {read: ElementRef}) experience: ElementRef;
-  @ViewChild(PersonalComponent, {read: ElementRef}) personal: ElementRef;
+  @ViewChild(HeroComponent, { read: ElementRef, static: true }) hero: ElementRef;
+  @ViewChild(ProjectsComponent, { read: ElementRef, static: true }) projects: ElementRef;
+  @ViewChild(EducationComponent, { read: ElementRef, static: true }) education: ElementRef;
+  @ViewChild(ExperienceComponent, { read: ElementRef, static: true }) experience: ElementRef;
+  @ViewChild(PersonalComponent, { read: ElementRef, static: true }) personal: ElementRef;
 
   constructor(
     private layoutService: LayoutService,

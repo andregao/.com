@@ -9,8 +9,8 @@ import { MatSidenav } from '@angular/material';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild(HeaderComponent, {read: ElementRef}) header: ElementRef;
-  @ViewChild(MatSidenav) sidenav: MatSidenav;
+  @ViewChild(HeaderComponent, { read: ElementRef, static: true }) header: ElementRef;
+  @ViewChild(MatSidenav, { static: true }) sidenav: MatSidenav;
 
   iconMap = {
     projects: 'build',

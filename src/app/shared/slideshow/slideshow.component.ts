@@ -23,8 +23,8 @@ import { debounceTime, filter, skip, takeUntil } from 'rxjs/operators';
   styleUrls: ['./slideshow.component.scss']
 })
 export class SlideshowComponent implements OnDestroy, AfterViewInit, OnInit {
-  @ViewChild('scroller', {read: CdkScrollable}) scroller: CdkScrollable;
-  @ViewChild('imageOverlay', {read: TemplateRef}) imageOverlay: TemplateRef<any>;
+  @ViewChild('scroller', { read: CdkScrollable, static: true }) scroller: CdkScrollable;
+  @ViewChild('imageOverlay', { read: TemplateRef, static: true }) imageOverlay: TemplateRef<any>;
   imageOverlayView: EmbeddedViewRef<any>;
   overlayRef: OverlayRef;
 
