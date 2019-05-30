@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { LayoutService } from './core/layout.service';
 import { HeaderComponent } from './core/header/header.component';
 import { MatSidenav } from '@angular/material/sidenav';
+import { GaService } from './core/ga.service';
 
 @Component({
   selector: 'ag-root',
@@ -9,8 +10,8 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild(HeaderComponent, { read: ElementRef, static: true }) header: ElementRef;
-  @ViewChild(MatSidenav, { static: true }) sidenav: MatSidenav;
+  @ViewChild(HeaderComponent, {read: ElementRef, static: true}) header: ElementRef;
+  @ViewChild(MatSidenav, {static: true}) sidenav: MatSidenav;
 
   iconMap = {
     projects: 'build',
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(
     public layoutService: LayoutService,
+    public ga: GaService,
   ) {
   }
 

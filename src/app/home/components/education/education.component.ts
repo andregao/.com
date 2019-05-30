@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { LayoutService } from '../../../core/layout.service';
 import { DialogData } from '../../../shared/models/dialog-data';
+import { GaService } from '../../../core/ga.service';
 
 @Component({
   selector: 'ag-education',
@@ -17,7 +18,7 @@ export class EducationComponent implements OnInit {
   };
   @Input() sectionContent;
 
-  constructor(public layoutService: LayoutService) {
+  constructor(public layoutService: LayoutService, public ga: GaService) {
   }
 
   ngOnInit() {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GaService } from '../ga.service';
 
 @Component({
   selector: 'ag-footer',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() {
+  constructor(public ga: GaService) {
   }
 
   ngOnInit() {

@@ -1,10 +1,26 @@
 import { Injectable } from '@angular/core';
 
+declare const gtag: Function;
+
 @Injectable({
   providedIn: 'root'
 })
 export class GaService {
-  mapCaptionToTarget(caption: string): string {
+
+  reportSlideshow(caption: string) {
+    gtag('event', this.mapCaptionToTarget(caption), {
+      'event_category': 'slideshow',
+    });
+  }
+
+  reportOutbound(url: string) {
+    gtag('event', url, {
+      'event_category': 'outbound',
+      'transport_type': 'beacon',
+    });
+  }
+
+  private mapCaptionToTarget(caption: string): string {
     switch (caption) {
       case 'Personal Site Demo': {
         return 'Project Demo: Personal Site';
@@ -43,7 +59,4 @@ export class GaService {
         return 'unknown slideshow';
     }
   };
-
-  constructor() {
-  }
 }

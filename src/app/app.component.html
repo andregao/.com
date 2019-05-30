@@ -34,11 +34,11 @@
       <!--sidenav static links-->
       <mat-nav-list>
         <mat-divider></mat-divider>
-        <a mat-list-item href="//github.com/andregao">
+        <a mat-list-item target="_blank" href="//github.com/andregao" (click)="ga.reportOutbound('Github from sidenav')">
           <mat-icon matListIcon svgIcon="github"></mat-icon>
           Github
         </a>
-        <a mat-list-item href="//github.com/andregao">
+        <a mat-list-item target="_blank" href="./assets/resume-andregao-2019.pdf" (click)="ga.reportOutbound('Resume from sidenav')">
           <mat-icon matListIcon>description</mat-icon>
           Resume
         </a>

@@ -59,6 +59,7 @@
             mat-stroked-button
             [href]="button.url"
             target="_blank"
+            (click)="ga.reportOutbound('Projects: '+button.url)"
             >GITHUB
           </a>
           <a
@@ -68,6 +69,7 @@
             color="primary"
             [href]="button.url"
             target="_blank"
+            (click)="ga.reportOutbound('Projects: '+button.url)"
             >SEE APP
           </a>
         </ng-container>

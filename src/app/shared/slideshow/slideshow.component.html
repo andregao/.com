@@ -32,7 +32,7 @@
         <div class="title mat-body" fxFlex="1 1 9">{{ item.caption }}</div>
         <!--youtube link template-->
         <ng-template #youtubeLink>
-          <a href="https://youtu.be/{{ item.url }}">
+          <a href="https://youtu.be/{{ item.url }}" (click)="ga.reportOutbound('Youtube: '+item.caption)">
             <img
               width="{{ contentWidth }}"
               height="{{ (contentWidth / 16) * 9 }}"

@@ -9,6 +9,7 @@
       mat-button
       href="//github.com/andregao"
       target="_blank"
+      (click)="ga.reportOutbound('Github from footer')"
     >
       <mat-icon svgIcon="github"></mat-icon>
       <span>Github</span>
@@ -17,6 +18,7 @@
       mat-button
       href="./assets/resume-andregao-2019.pdf"
       target="_blank"
+      (click)="ga.reportOutbound('Resume from footer')"
     >
       <mat-icon>description</mat-icon>
       <span>Resume</span>

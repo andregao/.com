@@ -16,6 +16,7 @@ import { CdkScrollable, Overlay, OverlayRef, ScrollDispatcher, ViewportRuler } f
 import { TemplatePortal } from '@angular/cdk/portal';
 import { Subject } from 'rxjs';
 import { debounceTime, filter, skip, takeUntil } from 'rxjs/operators';
+import { GaService } from '../../core/ga.service';
 
 @Component({
   selector: 'ag-slideshow',
@@ -55,6 +56,7 @@ export class SlideshowComponent implements OnDestroy, AfterViewInit, OnInit {
     private scrollDispatcher: ScrollDispatcher,
     private viewport: ViewportRuler,
     private ngZone: NgZone,
+    public ga: GaService,
   ) {
   }
 
