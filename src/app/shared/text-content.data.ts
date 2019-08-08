@@ -4,12 +4,59 @@ import { Project } from './models/project';
 export const TEXTCONTENT = {
   projects: [
     {
-      title: 'andregao.com',
-      subtitle: 'A personal website',
+      title: 'watchtv.web.app',
+      subtitle: 'A TV show tracker',
       description:
-        `A front end focused project built with Angular Material and Flex-Layout. it features a responsive design, reacts to scrolling behaviors, and utilizes modal interfaces. 
+        `Browse, favorite and follow all your shows and never miss an episode.
 
-After building this website, I became more proficient with CSS Flexbox, Web APIs, and managing views dynamically in Angular.`,
+This is a full-stack single page web application built with React, Redux, Material-UI, RxJS, and Node.js(serverless). it interacts with public API endpoints for entertainment data and uses GCP cloud functions to access user database. The React client features function components with hooks and observer pattern. Async Redux utilizes Observables and RxJS operators to handle side effect event streams. Firebase Authentication client library was used to provide secure user management and OAuth integration.
+
+Diving head-first into React from Angular was a lot of fun. By building this app, it forced me to use the new-found knowledge to bring a rough idea to a fully functioning application. It allowed me to work extensively with third-party APIs and gave me the opportunity to write backend Node.js logics. it was a challenging and rewarding experience and at the end it made me a better javascript developer.
+`,
+      thumbnail: 'watchtv-thumbnail.jpg',
+      buttons: [
+        {
+          type: 'demo',
+          dialogData: {
+            items: [
+              {type: 'image', url: './assets/projects/watchtv-1.gif', caption: 'TV tracker demo'},
+            ]
+          }
+        },
+        {type: 'github', url: '//github.com/andregao/watchtv-web-app'},
+        {type: 'app', url: '//watchtv.web.app'},
+      ]
+    },
+    {
+      title: 'thangs.web.app',
+      subtitle: 'A real-time todo list app',
+      description:
+        `A “back end of the front end” project that uses centralized state management and a real-time NoSQL database.
+
+After signing up for an account, a user can add and organize todos by projects, drag & drop to reorder items and keep their data in sync between devices. The app uses NgRx, a Redux state management tool, to manage client-side data and UI state. For the backend, it takes advantage of Firebase database library with server security rules, and its auth library for OAuth and token-based authentication.
+
+It was great learning to work with a Backend-as-a-Service and having the opportunity to try out the redux state management pattern.`,
+      thumbnail: 'mathangs-thumbnail.jpg',
+      buttons: [
+        {
+          type: 'demo',
+          dialogData: {
+            items: [
+              {type: 'image', url: './assets/projects/mathangs-1.gif', caption: 'Todo List Demo'},
+            ]
+          }
+        },
+        {type: 'github', url: '//github.com/andregao/thangs'},
+        {type: 'app', url: '//thangs.web.app'},
+      ]
+    },
+    {
+      title: 'andregao.com',
+      subtitle: 'A portfolio website',
+      description:
+        `A front end focused project built with Angular Material and Flex-Layout. it features a responsive design, reacts to scrolling behaviors, and utilizes modal interfaces.
+
+By composing and building this site, I became much more proficient with CSS Flexbox, Web APIs, and dynamically managing views in Angular.`,
       thumbnail: 'andregao-thumbnail.jpg',
       buttons: [
         {
@@ -24,35 +71,12 @@ After building this website, I became more proficient with CSS Flexbox, Web APIs
       ]
     },
     {
-      title: 'mathangs.com',
-      subtitle: 'A practical todo list app',
-      description:
-        `A “back end of the front end” project that uses centralized state management and a real-time NoSQL database.
-
-After signing up for an account, a user can add and organize todos by projects, drag & drop to reorder items and keep their data in sync between browsers. The app uses NgRx, a Redux state management pattern, to manage client-side data and state. For the backend, it takes advantage of Firestore’s real-time database with security rules, and Firebase Auth for OAuth and token-based authentications.
-
-It was rewarding learning to work with back end services and get to code in a functional programming pattern using RxJS operators.`,
-      thumbnail: 'mathangs-thumbnail.jpg',
-      buttons: [
-        {
-          type: 'demo',
-          dialogData: {
-            items: [
-              {type: 'image', url: './assets/projects/mathangs-1.gif', caption: 'Todo List Demo'},
-            ]
-          }
-        },
-        {type: 'github', url: '//github.com/andregao/mathangs'},
-        {type: 'app', url: '//mathangs.com'},
-      ]
-    },
-    {
       title: 'lowes10.com',
-      subtitle: 'A coupon code generator app that takes 10% off or more on Lowes orders(deactivated)',
+      subtitle: 'A coupon code generator app that takes 10% off or more on Lowes orders (deactivated)',
       description:
-        `This simple app was built in early 2018 when the internet discovered the algorithm for creating Lowes single-use coupons. The site helped users generate unique codes and featured a quick calculation tool for choosing the best type of savings. It checked with a database to make sure codes were unique, and users can use them online or create barcodes to scan at a store. Unfortunately, Lowes started making frequent updates to their algorithm and were actively removing sharing posts, which led to the abandonment of this application.
+        `This simple app was built in early 2018 when the internet discovered the algorithm for creating Lowes single-use coupons. The site helped users generate unique codes and featured a quick calculation tool for choosing the best type of savings. It verified with a database to make sure codes were unique, then a coupon code can be used online or converted to barcodes to scan at a store. Unfortunately, Lowes started making frequent updates to their algorithm and were actively removing my sharing posts, which led to the abandonment of this application.
 
-Though it's a short-lived project, It gave me joy knowing how much it helped people saved and reading thank you notes from some of the frequent users.`,
+Though it's a short-lived project, It gave me joy knowing how much it helped people saved and reading thank you messages from some of the frequent users.`,
       thumbnail: 'lowes10-thumbnail.jpg',
       buttons: [
         {
@@ -68,15 +92,15 @@ Though it's a short-lived project, It gave me joy knowing how much it helped peo
   ] as Project[],
   education: {
     pluralsight: {
-      title: 'Pluralsight Angular Path / React Path',
+      title: 'Pluralsight Angular, React Path',
       subtitle: ['RoleIQ Level 2 Angular / React Developer', '2019'],
-      description: 'I started fresh on Pluralsight to learn Angular and React in 2019 after some time off last year and really enjoyed the structure and quality of their courses. It helped me systematically study both frameworks, encouraged me to explore a wide range of topics, and gave me valuable insight into real-world best practices.',
+      description: 'I started fresh on Pluralsight to pick up Angular in 2019 after personal time off last year and enjoyed the quality of their courses. It helped me systematically study both frameworks, encouraged me to explore a wide range of topics, and gave me valuable insight into real-world best practices.',
     },
     college: {
       name: 'University of Tasmania & Shanghai Ocean University',
       degrees: ['Bachelor of Information System', 'Bachelor of Management'],
       dateAndLocation: ['2004-2008', 'Shanghai China'],
-      description: 'It\'s a dual degree program that offered faculty members and course materials from both universities. It focused on computer science and management with a variety of subjects. It cultivated my love for learning and inspired me to pursue technology as a career'
+      description: 'This was a dual degree program that offered faculty members and course materials from both universities. It focused on computer science and management training with a variety of subjects. It cultivated my love for constant learning and inspired me to pursue technology as a career'
     }
   },
   experience: [

@@ -1,5 +1,6 @@
 <ag-hero></ag-hero>
 <div class="container" fxLayout="column" fxLayoutAlign="start center">
+  
   <ag-projects [sectionContent]="dataService.projects$ | async"></ag-projects>
   <ag-education [sectionContent]="dataService.education$ | async"></ag-education>
   <ag-experience [sectionContent]="dataService.experience$ | async"></ag-experience>
