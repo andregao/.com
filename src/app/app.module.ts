@@ -36,5 +36,9 @@ export class AppModule {
       'github',
       sanitizer.bypassSecurityTrustResourceUrl('../assets/github.svg')
     );
+    iconRegistry.addSvgIcon(
+      'linkedin',
+      sanitizer.bypassSecurityTrustResourceUrl('../assets/linkedin.svg')
+    );
   }
 }

@@ -56,7 +56,7 @@ It was great learning to work with a Backend-as-a-Service and having the opportu
       description:
         `A front end focused project built with Angular Material and Flex-Layout. it features a responsive design, reacts to scrolling behaviors, and utilizes modal interfaces.
 
-By composing and building this site, I became much more proficient with CSS Flexbox, Web APIs, and dynamically managing views in Angular.`,
+By composing and building this site, I became more proficient with CSS Flexbox, Web APIs, and dynamically managing views in Angular.`,
       thumbnail: 'andregao-thumbnail.jpg',
       buttons: [
         {

@@ -1,0 +1,34 @@
+<div
+  class="links"
+  fxLayout="rom wrap"
+  fxLayoutAlign="center center"
+  [ngStyle]="{ color: theme.color, margin: theme.margin + ' 0' }"
+>
+  <a
+    mat-button
+    href="//github.com/andregao"
+    target="_blank"
+    (click)="ga.reportOutbound('Github from links')"
+  >
+    <mat-icon svgIcon="github"></mat-icon>
+    <span fxHide.xs>Github</span>
+  </a>
+  <a
+    mat-button
+    href="//linkedin.com/in/andregao/"
+    target="_blank"
+    (click)="ga.reportOutbound('LinkedIn from links')"
+  >
+    <mat-icon svgIcon="linkedin"></mat-icon>
+    <span fxHide.xs>LinkedIn</span>
+  </a>
+  <a
+    mat-button
+    href="./assets/resume-andregao-2019.pdf"
+    target="_blank"
+    (click)="ga.reportOutbound('Resume from links')"
+  >
+    <mat-icon>description</mat-icon>
+    <span fxHide.xs>Resume</span>
+  </a>
+</div>

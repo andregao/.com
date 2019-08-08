@@ -1,28 +1,4 @@
 <div class="container" fxLayout="column" fxLayoutAlign="start center">
-  <div
-    class="links"
-    fxLayout="rom wrap"
-    fxLayoutGap=".5rem"
-    fxLayoutAlign="center center"
-  >
-    <a
-      mat-button
-      href="//github.com/andregao"
-      target="_blank"
-      (click)="ga.reportOutbound('Github from footer')"
-    >
-      <mat-icon svgIcon="github"></mat-icon>
-      <span>Github</span>
-    </a>
-    <a
-      mat-button
-      href="./assets/resume-andregao-2019.pdf"
-      target="_blank"
-      (click)="ga.reportOutbound('Resume from footer')"
-    >
-      <mat-icon>description</mat-icon>
-      <span>Resume</span>
-    </a>
-  </div>
+  <ag-links [theme]="{ color: 'white', margin: '0' }"></ag-links>
   <a mat-button href="mailto:andregao@me.com">andregao@me.com</a>
 </div>
