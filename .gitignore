@@ -54,3 +54,4 @@ firebase.json
 
 #photoshop
 /photoshop/*
+*.log

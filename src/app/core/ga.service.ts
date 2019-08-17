@@ -22,18 +22,23 @@ export class GaService {
 
   private mapCaptionToTarget(caption: string): string {
     switch (caption) {
+      case 'TV Tracker Demo': {
+        return 'Project Demo: Watch TV';
+      }
       case 'Personal Site Demo': {
-        return 'Project Demo: Personal Site';
+        return 'Project Demo: Portfolio Site';
       }
       case 'Todo List Demo': {
-        return 'Project Demo: Mathangs';
+        return 'Project Demo: Thangs';
       }
       case 'Coupon Generator Demo': {
         return 'Project Demo: Lowes10';
       }
+
       case 'Degree': {
         return 'Education: Degree';
       }
+
       case 'Checking out the new tour bus at SXSW': {
         return 'Experience: IndieParty';
       }
@@ -46,6 +51,7 @@ export class GaService {
       case 'Live Event Setup': {
         return 'Experience: ShangBy';
       }
+
       case 'The Better Half': {
         return 'Personal: Family';
       }
