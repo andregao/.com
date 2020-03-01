@@ -17,11 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule, // only for registering svg icon
-    AppRoutingModule,
+    // AppRoutingModule,
     SharedModule,
     HomeModule,
     CoreModule,
-    HomeModule,
     MatGridListModule,
   ],
   providers: [],

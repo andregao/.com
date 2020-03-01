@@ -48,7 +48,8 @@
   <mat-sidenav-content>
     <div class="container" fxLayout="column">
       <ag-header [ngClass]="{'show': layoutService.headerIsShown$ | async}"></ag-header>
-      <router-outlet fxFlex></router-outlet>
+      <ag-home></ag-home>
+<!--      <router-outlet fxFlex></router-outlet>-->
     </div>
     <ag-footer></ag-footer>
   </mat-sidenav-content>

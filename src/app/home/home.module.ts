@@ -17,6 +17,9 @@ import { CoreModule } from '../core/core.module';
     ExperienceComponent,
     PersonalComponent,
   ],
+  exports: [
+    HomeComponent
+  ],
   imports: [
     SharedModule,
     CoreModule

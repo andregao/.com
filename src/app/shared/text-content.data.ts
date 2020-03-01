@@ -9,9 +9,9 @@ export const TEXTCONTENT = {
       description:
         `Browse, favorite and follow all your shows and never miss an episode.
 
-This is a full-stack single page web application built with React, Redux, Material-UI, RxJS, and Node.js(cloud functions). it interacts with public API endpoints for entertainment data and uses GCP cloud functions to access user database. The React client features function components with hooks and observer pattern. Async Redux utilizes Observables and RxJS operators to handle side effect event streams. Firebase Authentication client library was used to provide secure user management and OAuth integration.
+This is a full-stack single page web application built with React, Redux, Material-UI, RxJS, and Node.js(cloud functions). it interacts with public APIs for entertainment data and uses node endpoints to access user database. The React client uses function components with hooks and observer pattern. Redux Async actions utilizes Reactive operators to handle side effects on the event streams. Firebase Authentication library was used to provide secure user management and OAuth integration.
 
-Diving head-first into React from Angular was a lot of fun. By building this app, it forced me to use the new-found knowledge to bring a rough idea to a fully functioning application. It allowed me to work extensively with third-party APIs and gave me the opportunity to write backend Node.js logics. it was a challenging and rewarding experience and at the end it made me a better javascript developer.
+Diving head-first into React from Angular was a lot of fun. By building this app, it allowed me to use the new-found knowledge to create from a rough idea to a full functioning application. I got to work extensively with third-party APIs and write backend Node.js code for the database. it was a challenging and rewarding experience and made me a better javascript developer.
 `,
       thumbnail: 'watchtv-thumbnail.jpg',
       buttons: [
