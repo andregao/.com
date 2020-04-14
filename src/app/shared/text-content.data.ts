@@ -4,6 +4,17 @@ import { Project } from './models/project';
 export const TEXTCONTENT = {
   projects: [
     {
+      title: 'neucommunities.netlify.com',
+      subtitle: 'A Brochure style static website',
+      description:
+        `This is a Jamstack site built with Gatsby (React) and a Headless CMS (Contentful) for a friend's startup. Styled with CSS-in-JS (styled-components) using modern web APIs and responsive design. All content is managed by the CMS backend and a REST endpoint (Cloud Firestore) was used to collect contact form submissions. A simple serverless function (Cloud Functions) sends email notifications to the business team after receiving customer interests.`,
+      thumbnail: 'neu-thumbnail.png',
+      buttons: [
+        {type: 'github', url: '//github.com/andregao/neu'},
+        {type: 'app', url: '//neucommunities.netlify.com'},
+      ]
+    },
+    {
       title: 'watchtv.web.app',
       subtitle: 'A TV show tracker',
       description:
