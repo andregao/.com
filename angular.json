@@ -50,7 +50,6 @@
               "src/styles/index.scss"
             ],
             "scripts": [],
-            "es5BrowserSupport": true,
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/styles/"

@@ -4,26 +4,34 @@ import { Project } from './models/project';
 export const TEXTCONTENT = {
   projects: [
     {
-      title: 'neucommunities.netlify.com',
-      subtitle: 'A Brochure style static website',
+      title: 'Christmas Angel Tree',
+      subtitle: 'Holiday giving tree helping kids in need',
       description:
-        `This is a Jamstack site built with Gatsby (React) and a Headless CMS (Contentful) for a friend's startup. Styled with CSS-in-JS (styled-components) using modern web APIs and responsive design. All content is managed by the CMS backend and a REST endpoint (Cloud Firestore) was used to collect contact form submissions. A simple serverless function (Cloud Functions) sends email notifications to the business team after receiving customer interests.`,
-      thumbnail: 'neu-thumbnail.png',
+        `React web app with AWS CloudFormation using Lambda, DynamoDB and SNS. Built for Mater Academy Bonanza charter school for the annual community donation drive for the less privileged children. Visitors can view an angel’s wishes from a virtual tree and submit donation commitments while admins can manage children and donors via a dashboard. Matched 100 kids in need to their donors and delivered hundreds of presents to their homes`,
+      thumbnail: 'angeltree-thumbnail.jpg',
       buttons: [
-        {type: 'github', url: '//github.com/andregao/neu'},
-        {type: 'app', url: '//neucommunities.netlify.com'},
+        {type: 'github', url: '//github.com/andregao/angel-tree-react'},
+        {type: 'app', url: '//xmas2020.web.app'},
       ]
     },
     {
-      title: 'watchtv.web.app',
-      subtitle: 'A TV show tracker',
+      title: 'NeuCommunity.com',
+      subtitle: 'A marketing website for a prefab unit startup',
       description:
-        `Browse, favorite and follow all your shows and never miss an episode.
+        `A static site built with Gatsby (React), Contentful (CMS), and serverless functions. A front-end focused project that utilizes modern Web APIs like CSS Grid, Intersection Observer, and touch gestures. It uses continuous deployment for content publishing and serverless backend to collect customer interests and dispatch emails`,
+      thumbnail: 'neu-thumbnail.png',
+      buttons: [
+        {type: 'github', url: '//github.com/andregao/neu'},
+        {type: 'app', url: '//neucommunity.com'},
+      ]
+    },
+    {
+      title: 'TV Show Tracker',
+      subtitle: 'A personalized TV show tracking tool',
+      description:
+        `Browse, favorite, and follow all your shows and never miss an episode.
 
-This is a full-stack single page web application built with React, Redux, Material-UI, RxJS, and Node.js(cloud functions). it interacts with public APIs for entertainment data and uses node endpoints to access user database. The React client uses function components with hooks and observer pattern. Redux Async actions utilizes Reactive operators to handle side effects on the event streams. Firebase Authentication library was used to provide secure user management and OAuth integration.
-
-Diving head-first into React from Angular was a lot of fun. By building this app, it allowed me to use the new-found knowledge to create from a rough idea to a full functioning application. I got to work extensively with third-party APIs and write backend Node.js code for the database. it was a challenging and rewarding experience and made me a better javascript developer.
-`,
+This is a full-stack single page web application built with React, Redux, Material-UI, RxJS, and Node.js serverless functions. it interacts with public APIs for entertainment data and uses API endpoints to access the user database. The React client uses function components with hooks and observer patterns. Redux Async actions utilize a reactive paradigm to handle side effects on the event streams. Firebase Authentication library was used to provide secure user management and OAuth integration.`,
       thumbnail: 'watchtv-thumbnail.jpg',
       buttons: [
         {
@@ -39,14 +47,12 @@ Diving head-first into React from Angular was a lot of fun. By building this app
       ]
     },
     {
-      title: 'thangs.web.app',
+      title: 'Realtime List App',
       subtitle: 'A real-time todo list app',
       description:
-        `A “back end of the front end” Angular project that uses centralized state management and a real-time NoSQL database.
+        `A data-focused Angular project that uses centralized state management and a real-time NoSQL database.
 
-After signing up for an account, a user can add and organize todos by projects, drag & drop to reorder items and keep their data in sync between devices. The app uses NgRx, a Redux state management tool, to manage client-side data and UI state. For the backend, it takes advantage of Firebase database library with server security rules, and its auth library for OAuth and token-based authentication.
-
-It was great learning to work with a Backend-as-a-Service and having the opportunity to try out the redux state management pattern.`,
+After signing up for an account, a user can add and organize list items by projects, drag & drop to reorder items, and keep their data in sync between devices. The app uses NgRx, a Redux state management library, to manage client-side data and UI state. For the backend, it takes advantage of the Firebase database library with security rules, and its auth library for OAuth and token-based authentication.`,
       thumbnail: 'mathangs-thumbnail.jpg',
       buttons: [
         {
@@ -62,12 +68,10 @@ It was great learning to work with a Backend-as-a-Service and having the opportu
       ]
     },
     {
-      title: 'andregao.com',
-      subtitle: 'A portfolio website',
+      title: 'AndreGao.com',
+      subtitle: 'This portfolio website',
       description:
-        `A front end focused project built with Angular Material and Flex-Layout. it features a responsive design, reacts to scrolling behaviors, and utilizes modal interfaces.
-
-By composing and building this site, I became more proficient with CSS Flexbox, Web APIs, and dynamically managing views in Angular.`,
+        `A frontend project built with Angular Material and Flex-Layout. It features a responsive design, scroll event interactions, and utilizes modal interfaces.`,
       thumbnail: 'andregao-thumbnail.jpg',
       buttons: [
         {
@@ -82,12 +86,12 @@ By composing and building this site, I became more proficient with CSS Flexbox, 
       ]
     },
     {
-      title: 'lowes10.com',
-      subtitle: 'A coupon code generator app that takes 10% off or more on Lowes orders (deactivated)',
+      title: 'Lowes Coupon Generator',
+      subtitle: 'A coupon generator app that takes 10% or more off Lowes orders',
       description:
-        `This simple app was built in early 2018 when the internet discovered the algorithm for creating Lowes single-use coupons. The site helped users generate unique codes and featured a quick calculation tool for choosing the best type of savings. It verified with a database to make sure codes were unique, then a coupon code can be used online or converted to barcodes to scan at a store. Unfortunately, Lowes started making frequent updates to their algorithm and were actively removing my sharing posts, which led to the abandonment of this application.
+        `This is my first ever web project built in early 2018 when Reddit discovered the algorithm for creating Lowes single-use coupons. My web app helped users generate unique coupon codes and featured a quick calculation tool for choosing the best type of coupon savings. It verifies with a database to make sure codes were unique. Users can then apply them online or converted them to barcodes to scan at a local store. At the end of 2018, Lowes started making frequent updates to their algorithm and actively flagging sharing posts, which led to the discontinuation of this application.
 
-Though it's a short-lived project, It gave me joy knowing how much it helped people saved and reading thank you messages from some of the frequent users.`,
+Though it's a short-lived project, it gave me a lot of joy reading thank you notes from many of my users and knowing how much money it helped them saved.`,
       thumbnail: 'lowes10-thumbnail.jpg',
       buttons: [
         {
@@ -136,11 +140,12 @@ Though it's a short-lived project, It gave me joy knowing how much it helped peo
       location: 'Hangzhou China, Las Vegas NV',
       year: '2011 - 2017',
       description:
-        `I was one of the founding members at this tech startup that used technology to help small businesses purchase directly from China to improve their profit margin. We won the TechCrunch Disrupt Beijing in 2011 and later evolved the business model to developing and supplying smart retail solutions.
+        `I was the co-founder of this startup that used technology to help small businesses purchase directly from China to improve their profit margin. We won the TechCrunch Disrupt Beijing in 2011 and later evolved the business model to developing and supplying smart retail solutions.
 
-In China, I led a sourcing team of 7 helping Chinese manufacturers showcase their catalogs to US companies and brought our American clients’ product ideas from prototypes to mass productions. I managed supply chains for several private label programs that included sporting goods, construction, fashion and holiday decorations. We shipped dozens of containers to the US and delivered quality and low-cost products to small businesses.
+In China, I led a sourcing team of 7 helping Chinese manufacturers showcase their catalogs to US companies and brought our American clients’ product ideas from prototypes to mass productions. I managed supply chains for several private label programs that included sporting goods, construction, fashion, and holiday decorations. We shipped dozens of containers to the US and delivered millions of dollars of quality and low-cost products to small businesses.
 
-After the company pivoted we opened a new office in Las Vegas where I took on the role of IT Operations. I designed and implemented the IT infrastructure for our 20,000 sqft Zappos pop-up store in downtown Las Vegas where we deployed a fleet of smart shopping kiosks and welcomed thousands of customers.`,
+After the company pivoted we opened an office in Las Vegas where I took on the role of IT Operations. I designed and implemented the IT infrastructure for our 20,000 sqft Zappos pop-up store in downtown Las Vegas where we deployed a fleet of smart shopping kiosks and welcomed thousands of customers.
+`,
       dialog: {
         items: [
           {type: 'image', url: './assets/experience/owm-1.jpg', caption: 'At the wholesale market talking to vendors'},
@@ -181,10 +186,10 @@ After the company pivoted we opened a new office in Las Vegas where I took on th
     },
   ] as Company[],
   personal: {
-    intro: 'Born and raised in southeast China, I\'m a recent immigrant, a new father, and had just started an exciting career in software engineering. Here are a few more snapshots of my life.',
+    intro: 'Born and raised in southeast China, I\'m a new immigrant, a father, and had just started an exciting new career in software engineering. Here are a few snapshots of my life thus far.',
     subSections: [
       {
-        title: 'Family',
+        title: 'FAMILY',
         thumbnails: {
           col: './assets/personal/family/thumbnail-col.jpg',
           row: './assets/personal/family/thumbnail-row.jpg',
@@ -200,7 +205,7 @@ After the company pivoted we opened a new office in Las Vegas where I took on th
         }
       },
       {
-        title: 'Friends',
+        title: 'FRIENDS',
         thumbnails: {
           col: './assets/personal/friends/thumbnail-col.jpg',
           row: './assets/personal/friends/thumbnail-row.jpg',
@@ -216,7 +221,7 @@ After the company pivoted we opened a new office in Las Vegas where I took on th
         }
       },
       {
-        title: 'Community',
+        title: 'COMMUNITY',
         thumbnails: {
           col: './assets/personal/communities/thumbnail-col.jpg',
           row: './assets/personal/communities/thumbnail-row.jpg',
